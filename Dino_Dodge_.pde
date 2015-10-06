@@ -24,6 +24,12 @@ void draw() {
   //create the apperence of moving by changeing the x position 
  x = x - 5;
  
+ //put the cactus back on the right side if is goes off the left side
+if(x < -25){
+   x = 900; //place off screen on right 
+   
+}
+ 
 }
 
  
