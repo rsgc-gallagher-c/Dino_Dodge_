@@ -1,10 +1,15 @@
 //Create a game like the one in google chrome
 //Carlyle Gallagher 
 
+//Globe variables can be used everywhere below 
+int x; //tracks horizontal positon of the first cactus
+
 void setup() {
  
   //draw canvas 
  size(800,200);
+  //set initial position of the cactus 
+ x = 900;
   
 }
 
@@ -14,7 +19,11 @@ void draw() {
  background(255);
   
   //draw circle at bottom 
- ellipse(775,175,50,50);
+ ellipse(x,175,50,50);
+ 
+  //create the apperence of moving by changeing the x position 
+ x = x - 1;
+ 
 }
 
  
