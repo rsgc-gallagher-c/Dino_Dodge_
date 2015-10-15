@@ -9,6 +9,7 @@ float dinoY;     // tracks position of dino
 float dinoS;     // tracks speed of dino
 float dinoA;     // tracks acceleration of the dino
 float gravity;   // gravity
+float distance;  // tracks the distance between the dino and a cactus 
 
 // this function runs once only
 void setup() {
@@ -59,10 +60,25 @@ void draw() {
   }
 
   //Status Update
+  textSize(12); 
   fill(0);
   text("dinoY is " + dinoY, 150, 25);
   text("dinoS is " + dinoS, 150, 50);
   text("dinoA is " + dinoA, 150, 75);
+  text("distance is " + distance, 150, 100); 
+
+  // determine the distance between the objects  
+  //dino - cactus     
+  float a = dinoY - 175; 
+  float b = 50 - x1; 
+  distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
+
+//determine weather there is a hit
+ if(distance  < (30 + 25) ) {
+   textSize(80);
+   text("HIT", 100, 100);
+ }
+
 
   //Move the Dino
   dinoA = dinoA + gravity;
