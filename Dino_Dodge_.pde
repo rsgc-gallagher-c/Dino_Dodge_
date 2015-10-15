@@ -54,7 +54,7 @@ void draw() {
   x1 = x1 + s1;
 
   // put the cactus back on the right edge if it goes off the left edge
-  if (x1 < -25) {
+  if (x1 < -100) {
     x1 = 900; // place off screen on right 
     s1 = -1;  // reset the speed (to avoid insanely fast movement)
   }
@@ -80,8 +80,14 @@ void draw() {
    noLoop();
  }
  
+ //Increase score  
+ 
+ if(x1 < 0) {
+   
+   textSize(40);
+   text("+100", 6, 50);
 
-
+ }
 
   //Move the Dino
   dinoA = dinoA + gravity;
