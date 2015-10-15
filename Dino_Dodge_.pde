@@ -74,10 +74,13 @@ void draw() {
   distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
 
 //determine weather there is a hit
- if(distance  < (30 + 25) ) {
+ if(distance  < (10 + 25) ) {
    textSize(80);
-   text("HIT", 100, 100);
+   text("GAME OVER", 285, 100);
+   noLoop();
  }
+ 
+
 
 
   //Move the Dino
