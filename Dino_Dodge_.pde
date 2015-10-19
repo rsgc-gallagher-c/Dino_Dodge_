@@ -2,9 +2,9 @@
 //Carlyle Gallagher 
 
 // global variables (can be used everywhere below)
-float x1;    // tracks horizontal position of first cactus
-float s1;    // speed for first cactus
-float a1;    // acceleration for first cactus
+
+Cactus c1; //makes a place in memery to keep cactus object 
+
 float dinoY;     // tracks position of dino
 float dinoS;     // tracks speed of dino
 float dinoA;     // tracks acceleration of the dino
@@ -16,14 +16,7 @@ void setup() {
   // draw the canvas
   size(800, 200);
 
-  // set the initial position of the cactus
-  x1 = 900; // position it off-screen on the right
-
-  // set the intial acceleration
-  a1 = -0.1;
-
-  // set the initial speed
-  s1 = -1;
+c1 = new Cactus (900, 175, -0.1, -1);
 
   // set dino initial vertical position
   dinoY = 170;
@@ -43,21 +36,9 @@ void draw() {
   // background clears each time the program loops
   background(255);
 
-  // draw a circle at bottom right corner of the screen
-  //       x    y    w   h
-  ellipse(x1, 175, 25, 25);
 
-  // change the speed
-  s1 = s1 + a1;
 
-  // create the appearance of moving by changing the x position
-  x1 = x1 + s1;
-
-  // put the cactus back on the right edge if it goes off the left edge
-  if (x1 < -100) {
-    x1 = 900; // place off screen on right 
-    s1 = -1;  // reset the speed (to avoid insanely fast movement)
-  }
+c1.update(gravity); 
 
   //Status Update
   textSize(12); 
@@ -67,27 +48,27 @@ void draw() {
   text("dinoA is " + dinoA, 150, 75);
   text("distance is " + distance, 150, 100); 
 
-  // determine the distance between the objects  
-  //dino - cactus     
-  float a = dinoY - 175; 
-  float b = 50 - x1; 
-  distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
+  //// determine the distance between the objects  
+  ////dino - cactus     
+  //float a = dinoY - 175; 
+  //float b = 50 - x1; 
+  //distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
 
-//determine weather there is a hit
- if(distance  < (10 + 21) ) {
-   textSize(80);
-   text("GAME OVER", 285, 100);
-   noLoop();
- }
+////determine weather there is a hit
+ //if(distance  < (10 + 21) ) {
+  // textSize(80);
+  // text("GAME OVER", 285, 100);
+  // noLoop();
+ //}
  
- //Increase score  
+ ////Increase score  
  
- if(x1 < 0) {
+ //if(x1 < 0) {
    
-   textSize(40);
-   text("+100", 6, 50);
+ //  textSize(40);
+ //  text("+100", 6, 50);
 
- }
+ //}
 
   //Move the Dino
   dinoA = dinoA + gravity;
