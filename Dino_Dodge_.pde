@@ -35,7 +35,7 @@ void setup() {
   dinoA = -0.5;
 
   // set gravity
-  gravity = 0.05;
+  gravity = 0.075;
 }
 
 // this function runs repeatedly
