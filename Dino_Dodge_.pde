@@ -74,7 +74,7 @@ void draw() {
   distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
 
 //determine weather there is a hit
- if(distance  < (10 + 25) ) {
+ if(distance  < (10 + 21) ) {
    textSize(80);
    text("GAME OVER", 285, 100);
    noLoop();
