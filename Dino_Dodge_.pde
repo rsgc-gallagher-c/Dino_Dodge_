@@ -48,18 +48,18 @@ void draw() {
   text("dinoA is " + dinoA, 150, 75);
   text("distance is " + distance, 150, 100); 
 
-  //// determine the distance between the objects  
-  ////dino - cactus     
-  //float a = dinoY - 175; 
-  //float b = 50 - x1; 
-  //distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
+  // determine the distance between the objects  
+  //dino - cactus     
+  float a = dinoY - 175; 
+  float b = 50 - c1.getx(); 
+  distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
 
-  ////determine weather there is a hit
-  //if(distance  < (10 + 21) ) {
-  // textSize(80);
-  // text("GAME OVER", 285, 100);
-  // noLoop();
-  //}
+  //determine weather there is a hit
+  if(distance  < (10 + 21) ) {
+  textSize(80);
+  text("GAME OVER", 285, 100);
+  noLoop();
+  }
 
   ////Increase score  
 
