@@ -81,6 +81,7 @@ c1.update(gravity);
     dinoA = 0;
     dinoY = 170;
   }
+  
 
   // draw the dino
   ellipse(50, dinoY, 50, 50);
@@ -88,6 +89,8 @@ c1.update(gravity);
 
 // respond to keypress 
 void keyPressed() {
-
+if(dinoY == 170)
+{
   dinoA = -1;
+}
 }
