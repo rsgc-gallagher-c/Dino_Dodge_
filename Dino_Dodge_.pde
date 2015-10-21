@@ -16,7 +16,7 @@ void setup() {
   // draw the canvas
   size(800, 200);
 
-c1 = new Cactus (900, 175, -0.1, -1);
+  c1 = new Cactus(900, 175, -0.1, -1);
 
   // set dino initial vertical position
   dinoY = 170;
@@ -38,7 +38,7 @@ void draw() {
 
 
 
-c1.update(gravity); 
+  c1.update(gravity); 
 
   //Status Update
   textSize(12); 
@@ -54,21 +54,21 @@ c1.update(gravity);
   //float b = 50 - x1; 
   //distance = sqrt( pow(a, 2) + pow(b, 2)      ); 
 
-////determine weather there is a hit
- //if(distance  < (10 + 21) ) {
+  ////determine weather there is a hit
+  //if(distance  < (10 + 21) ) {
   // textSize(80);
   // text("GAME OVER", 285, 100);
   // noLoop();
- //}
- 
- ////Increase score  
- 
- //if(x1 < 0) {
-   
- //  textSize(40);
- //  text("+100", 6, 50);
+  //}
 
- //}
+  ////Increase score  
+
+  //if(x1 < 0) {
+
+  //  textSize(40);
+  //  text("+100", 6, 50);
+
+  //}
 
   //Move the Dino
   dinoA = dinoA + gravity;
@@ -81,7 +81,7 @@ c1.update(gravity);
     dinoA = 0;
     dinoY = 170;
   }
-  
+
 
   // draw the dino
   ellipse(50, dinoY, 50, 50);
@@ -89,8 +89,8 @@ c1.update(gravity);
 
 // respond to keypress 
 void keyPressed() {
-if(dinoY == 170)
-{
-  dinoA = -1;
-}
+  if (dinoY == 170)
+  {
+    dinoA = -1;
+  }
 }
