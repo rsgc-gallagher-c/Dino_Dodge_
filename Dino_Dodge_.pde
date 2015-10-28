@@ -7,6 +7,7 @@
  float distance;  // tracks the distance between the dino and a cactus 
 
 Cactus c1; //makes a place in memery to keep cactus object 
+Dinosaur d1; //makes a place for the dino 
 
 // this function runs once only
 void setup() {
@@ -14,7 +15,7 @@ void setup() {
   size(800, 200);
 
   c1 = new Cactus(900, 175, -0.1, -1);
-
+  d1 = new Dinosaur(170, 0, 0);
   
 }
 
@@ -24,16 +25,16 @@ void draw() {
   background(255);
 
 
-
+  d1.update(gravity); 
   c1.update(gravity); 
 
   //Status Update
-  textSize(12); 
-  fill(0);
-  text("dinoY is " + dinoY, 150, 25);
-  text("dinoS is " + dinoS, 150, 50);
-  text("dinoA is " + dinoA, 150, 75);
-  text("distance is " + distance, 150, 100); 
+  //textSize(12); 
+  //fill(0);
+  //text("dinoY is " + dinoY, 150, 25);
+  //text("dinoS is " + dinoS, 150, 50);
+  //text("dinoA is " + dinoA, 150, 75);
+  //text("distance is " + distance, 150, 100); 
 
   // determine the distance between the objects  
   //dino - cactus     
