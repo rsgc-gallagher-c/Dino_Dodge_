@@ -3,8 +3,8 @@
 
 // global variables (can be used everywhere below)
 
- float gravity;   // gravity
- float distance;  // tracks the distance between the dino and a cactus 
+float gravity;   // gravity
+float distance;  // tracks the distance between the dino and a cactus 
 
 Cactus c1; //makes a place in memery to keep cactus object 
 Dinosaur d1; //makes a place for the dino 
@@ -16,7 +16,6 @@ void setup() {
 
   c1 = new Cactus(900, 175, -0.1, -1);
   d1 = new Dinosaur(170, 0, 0);
-  
 }
 
 // this function runs repeatedly
@@ -27,6 +26,8 @@ void draw() {
 
   d1.update(gravity); 
   c1.update(gravity); 
+  // set gravity
+  gravity = 0.075;
 
   //Status Update
   //textSize(12); 
@@ -38,10 +39,10 @@ void draw() {
 
   // determine the distance between the objects  
   //dino - cactus     
- 
+
 
   //determine weather there is a hit
-  
+
 
   ////Increase score  
 
@@ -53,17 +54,16 @@ void draw() {
   //}
 
   //Move the Dino
-  
+
 
 
   // draw the dino
-    
 }
 
 // respond to keypress 
 void keyPressed() {
-    if (d1.dinoY == 170)
-    {
-      d1.dinoA = -1;
-    }
+  if (d1.dinoY == 170)
+  {
+    d1.dinoA = -1;
   }
+}

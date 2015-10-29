@@ -32,14 +32,20 @@ class Cactus {
     // draw a circle at bottom right corner of the screen
     //       x    y    w   h
     ellipse(x1, 175, 25, 25);
+    ellipse(x1, y1, 25, 25);
   }
 
 
-    //GetX
-    //Purpose: to return X position of the cactus 
-    float getx() {
-    
-      return x1; 
-      
-    }
+  //GetX
+  //Purpose: to return X position of the cactus 
+  float getx() {
+
+    return x1;
+  }
+
+  // getY
+  // Purpose: an accessor method; lets us find out where the cactus is (vertically)
+  float getY() {
+    return y1;
+  }
 }
