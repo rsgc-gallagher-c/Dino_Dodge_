@@ -57,7 +57,13 @@ void draw() {
 
 
   // draw the dino
-  
+    
 }
 
 // respond to keypress 
+void keyPressed() {
+    if (d1.dinoY == 170)
+    {
+      d1.dinoA = -1;
+    }
+  }

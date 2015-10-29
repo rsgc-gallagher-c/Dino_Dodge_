@@ -41,7 +41,7 @@ class Dinosaur {
     dinoA = dinoA + gravity;
     dinoS = dinoS + dinoA; //change speed based on acceleration 
     dinoY = dinoY + dinoS; //change acceleration based on speed
-
+    
     //Stop the dino if it hits the ground 
     if (dinoY > 170) {//bottom of the screen (200) minus the radius 
       dinoS = 0;
@@ -51,11 +51,18 @@ class Dinosaur {
 
     ellipse(50, dinoY, 50, 50); //draws the dino on the screen 
   }
-
-  void keyPressed() {
-    if (dinoY == 170)
-    {
-      dinoA = -1;
-    }
+ // getY
+  // Purpose: an accessor method; lets us find out where the dino is (vertically)
+float getY() {
+    return dinoY;
   }
+  
+  // setA
+  //
+  // Purpose: a mutator method; lets the acceleration for the dinosaur be set
+  //          from outside the class
+  void setA(float newA_) {
+    dinoA = newA_;
+  }
+
 }
