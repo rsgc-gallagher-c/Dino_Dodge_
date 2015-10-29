@@ -20,6 +20,14 @@ class Dinosaur {
 
   void update(float gravity)
   {
+     // status updates for dinosaur position
+    textSize(12);
+    fill(0);
+    text("dinoY is " + dinoY, 150, 25);
+    text("dinoS is " + dinoS, 150, 50);
+    text("dinoA is " + dinoA, 150, 75);
+  // text("distance is " + distance, 150, 100); // will make this work later
+    
     //float a = dinoY - 175; 
     //float b = 50 - c1.getx(); 
     //distance = sqrt( pow(a, 2) + pow(b, 2)      );  
