@@ -33,7 +33,7 @@ class Dinosaur {
     float b = 50 - c1.getx(); 
     distance = sqrt( pow(a, 2) + pow(b, 2)      );  
 
-    if (distance  < (10 + 21) ) {
+    if (distance  < (10 + 45) ) {
      textSize(80);
      text("GAME OVER", 285, 100);
      noLoop();
