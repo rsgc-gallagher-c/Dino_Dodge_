@@ -28,15 +28,15 @@ class Dinosaur {
     text("dinoA is " + dinoA, 150, 75);
   // text("distance is " + distance, 150, 100); // will make this work later
     
-    //float a = dinoY - 175; 
-    //float b = 50 - c1.getx(); 
-    //distance = sqrt( pow(a, 2) + pow(b, 2)      );  
+    float a = dinoY - 175; 
+    float b = 50 - c1.getx(); 
+    distance = sqrt( pow(a, 2) + pow(b, 2)      );  
 
-    //if (distance  < (10 + 21) ) {
-    //  textSize(80);
-    //  text("GAME OVER", 285, 100);
-    //  noLoop();
-    //}
+    if (distance  < (10 + 21) ) {
+     textSize(80);
+     text("GAME OVER", 285, 100);
+     noLoop();
+    }
 
     dinoA = dinoA + gravity;
     dinoS = dinoS + dinoA; //change speed based on acceleration 
