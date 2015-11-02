@@ -41,9 +41,6 @@ void draw() {
   //dino - cactus     
 
 
-  //determine weather there is a hit
-
-
   ////Increase score  
 
   //if(x1 < 0) {
